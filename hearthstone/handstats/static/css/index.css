@@ -1,0 +1,161 @@
+
+h3 {
+    font-weight: 300;
+}
+
+h4 {
+    font-weight: 300;
+}
+
+h5 {
+    font-weight: 300;
+}
+
+nav .brand-logo {
+    font-family: Telegraphico;
+    font-size: 40px;
+}
+
+nav .input-field {
+    font-family: Helvetica;
+}
+
+
+.info-card {
+    width: 400px;
+}
+
+.navbar-links {
+    font-family: Telegraphico;
+}
+
+@font-face {
+    font-family: Telegraphico;
+    src: url(../font/telegrafico.ttf);
+}
+
+.question-title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+    color: rgb(38, 166, 154);
+}
+
+.question-description{
+    text-align: center;
+    font-size: 15px;
+}
+
+.card .comment-title{
+    font-size: 18px;
+}
+
+.card-content .comment-content{
+    font-size: 12px;
+}
+
+.question-attributes {
+    font-size: 11px;
+}
+
+.answer .question-attributes {
+    font-size: 11px;
+    margin-top: 25px;
+}
+
+.question-attributes .material-icons {
+    font-size: 12px;
+}
+
+.user-field {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.positive-comment .card {
+    border: 1px solid;
+    border-color: lightgreen;
+}
+
+.negative-comment .card {
+    border: 1px solid;
+    border-color: red;
+}
+
+.comment-rates{
+    margin-left: 11px;
+    margin-top: 15px;
+}
+
+.comment-user{
+    font-size: 12px;
+}
+
+.custom-ace-editor {
+	margin-bottom: 30px;
+}
+
+.vote-button {
+    cursor: pointer;
+}
+
+/*
+#index-dropdown {
+    position: relative;
+    left: -100px;
+    top: 40px;
+}*/
+
+.language-dropdown {
+    width: 130px;
+}
+
+ul.collection {
+    width: 500px;
+}
+
+.ranking-name{
+    font-size: 20px;
+    color: grey;
+    position: relative;
+    top: 10px;
+}
+
+.ranking-row-content{
+    margin-top: 10px;
+}
+
+.collection .collection-item.avatar .secondary-content{
+    position: relative;
+    top: 10px;
+}
+
+.ranking-dropdown {
+    width: 130px;
+}
+
+.profile-img{
+    width: 200px;
+}
+
+.vote-button .material-icons {
+    position: relative;
+    top: 6px;
+}
+
+.question-attributes .material-icons {
+    position: relative;
+    top: 2px;
+}
+
+.question-index {
+	width: 100%;
+}
+
+.highlight-blue {
+	color: blue;
+}
+
+#start {
+    cursor: pointer;
+}

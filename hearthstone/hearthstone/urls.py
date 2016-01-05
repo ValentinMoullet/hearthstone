@@ -17,6 +17,6 @@ Including another URLconf
 from django.conf.urls import include, url
 
 urlpatterns = [
-	url(r'^handstats/', include('handstats.urls')),
 	url(r'^', include('handstats.urls')),
+	url(r'^handstats/', include('handstats.urls')),
 ]

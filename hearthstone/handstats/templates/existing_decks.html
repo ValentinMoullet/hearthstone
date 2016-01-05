@@ -1,0 +1,20 @@
+{% extends 'base_index.html' %}
+
+{% block title %} Existing decks {% endblock title%}
+
+{% block main_content %}
+	<div class="row center">
+	  <br>
+	  <form action="{% url 'create_deck'%}" method="get">
+	  <input type="submit" id="create-deck-button" class="btn" name="create-deck-button" value="Create a new deck">
+	  {% csrf_token %}
+	  </form>
+	  <!--<a class="waves-effect waves-light btn" id="create-deck-button"> Create a new deck </a>-->
+	</div>
+    <div>
+        <h4> Existing decks </h4>
+        <p>
+          These are the decks that are currently available. It means that your opponent HAS to play one of these decks so that you can use this tool efficiently.
+        </p>
+    </div>
+{% endblock %}

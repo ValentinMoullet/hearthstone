@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <title>
+            {% block title %}{% endblock title %}
+        </title>
+
+        {% load staticfiles %}
+        <!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css'%}"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="{% static 'css/index.css'%}">
+		<link type="text/css" rel="stylesheet" href="{% static 'css/jquery-ui.css'%}">
+        <!-- Use icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- ____________________ NAVBAR ____________________ -->
+        <nav>
+            <div class="nav-wrapper orange">
+                <a href="{% url 'index'%}" class="brand-logo">HandStats</a>
+                <ul class="right hide-on-med-and-down navbar-links">
+                    <li>
+                      <a id="start" >Start</a>
+                    </li>
+					<!--
+                    <li style="height:64px">
+                        <form>
+                            <div class="input-field">
+                                <input id="search" type="search" placeholder="Search" autocomplete="off" required>
+                                <label for="search"><i class="material-icons">search</i></label>
+                            </div>
+                        </form>
+                    </li>
+					-->
+                    <li><a href="{% url 'existing_decks' %}">Existing decks</a></li>
+                    <li><a href="{% url 'help' %}">Help</a></li>
+					<!--
+					<li>
+                        {% if user.is_authenticated %}
+                            <a href="#">Profile</a>
+                        {% endif %}
+                    </li>
+					
+                    {% if user.is_authenticated %}
+                        <li><a href="#">Log-out</a></li>
+                    {% else %}
+                        <li><a href="#">Log-in</a></li>
+                    {% endif %}
+					-->
+                </ul>
+            </div>
+        </nav>
+
+		<!--<div id="questions-search"></div>-->
+
+        <div class="container">
+            {% block main_content %} {% endblock main_content %}
+        </div>
+
+
+
+      <!--Import jQuery before materialize.js-->
+	  {% block js_import %}
+      <script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js'%}"></script>
+	  <script type="text/javascript" src="{% static 'js/jquery-ui.js'%}"></script>
+      <script type="text/javascript" src="{% static 'js/materialize.min.js'%}"></script>
+	  <script type="text/javascript" src="{% static 'js/create-deck.js'%}"></script>
+	  {% endblock js_import %}
+    </body>
+
+  </html>

@@ -1,0 +1,13 @@
+{% extends 'base_index.html'%}
+{% block title %} Home {% endblock title %}
+
+{% block main_content %}
+<div class="row center">
+  <br>
+  <form action="{% url 'initiate_game'%}" method="get">
+	  <input type="submit" id="start-game-button" class="btn" name="start-game-button" value="Start a new game">
+	  {% csrf_token %}
+	  </form>
+</div>
+
+{% endblock main_content %}
