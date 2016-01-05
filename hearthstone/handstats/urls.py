@@ -8,5 +8,6 @@ urlpatterns = [
 	url(r'^initiate_game$','handstats.game.views.initiate_game',name='initiate_game'),
 	url(r'^existing_decks$','handstats.decks.views.existing_decks',name='existing_decks'),
 	url(r'^create_deck$','handstats.decks.views.create_deck',name='create_deck'),
+	url(r'^get_matching_cards$','handstats.cards.views.get_matching_cards',name='get_matching_cards'),
 	url(r'^help$','handstats.help.views.help',name='help'),
 ]
