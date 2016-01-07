@@ -9,5 +9,9 @@ urlpatterns = [
 	url(r'^existing_decks$','handstats.decks.views.existing_decks',name='existing_decks'),
 	url(r'^create_deck$','handstats.decks.views.create_deck',name='create_deck'),
 	url(r'^get_matching_cards$','handstats.cards.views.get_matching_cards',name='get_matching_cards'),
+	url(r'^create_new_deck_creation$','handstats.deck_creation.views.create_new_deck_creation',name='create_new_deck_creation'),
+	url(r'^submit_deck_creation$','handstats.deck_creation.views.submit_deck_creation',name='submit_deck_creation'),
+	url(r'^add_card_to_deck_creation$','handstats.deck_creation.views.add_card_to_deck_creation',name='add_card_to_deck_creation'),
+	url(r'^remove_card_from_deck_creation$','handstats.deck_creation.views.remove_card_from_deck_creation',name='remove_card_from_deck_creation'),
 	url(r'^help$','handstats.help.views.help',name='help'),
 ]

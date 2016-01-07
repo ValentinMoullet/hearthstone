@@ -159,3 +159,13 @@ ul.collection {
 #start {
     cursor: pointer;
 }
+
+.matching-card {
+	cursor: pointer;
+}
+
+.remove-card {
+	cursor: pointer;
+	font-weight: bold;
+	color: red;
+}

@@ -1,0 +1,1 @@
+{"id":{{real_card.id}}, "html":"{{real_card.html|safe}}"}

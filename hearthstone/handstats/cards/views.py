@@ -9,7 +9,6 @@ def get_matching_cards(request):
 	context = {}
 
 	if 'search' in request.GET and not request.GET['search'] == '':
-		# Get all words in request
 		search = request.GET['search']
 
 		cards = Card.objects.filter(name__contains=search).order_by('cost')[:10]
@@ -19,3 +18,7 @@ def get_matching_cards(request):
 		return render(request, 'cards_search.json', context, content_type='application/json')
 
 	return HttpResponse("")
+
+
+
+	
