@@ -1,0 +1,1 @@
+{"decks":[{% for deck in decks.all %}{%spaceless%}{% include 'deck.json' %}{%endspaceless%}{% if not forloop.last %}, {% endif %}{% endfor %}]}

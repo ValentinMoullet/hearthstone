@@ -1,7 +1,19 @@
 {% extends 'base_index.html' %}
+{% load staticfiles %}
 
 {% block title %} Game initialization {% endblock title%}
 
 {% block main_content %}
-        <h4> What is the class of your opponent ? </h4>
+		<div id="main-content" >
+			<h4> What is the class of your opponent ? </h4>
+			<img id="mage" class="hero-opponent" src="{% static 'css/hero_pictures/mage.png' %}" alt="Mage">
+			<img id="paladin" class="hero-opponent" src="{% static 'css/hero_pictures/paladin.png' %}" alt="Paladin">
+			<img id="hunter" class="hero-opponent" src="{% static 'css/hero_pictures/hunter.png' %}" alt="Hunter">
+			<img id="shaman" class="hero-opponent" src="{% static 'css/hero_pictures/shaman.png' %}" alt="Shaman">
+			<img id="priest" class="hero-opponent" src="{% static 'css/hero_pictures/priest.png' %}" alt="Priest">
+			<img id="warlock" class="hero-opponent" src="{% static 'css/hero_pictures/warlock.png' %}" alt="Warlock">
+			<img id="warrior" class="hero-opponent" src="{% static 'css/hero_pictures/warrior.png' %}" alt="Warrior">
+			<img id="druid" class="hero-opponent" src="{% static 'css/hero_pictures/druid.png' %}" alt="Druid">
+			<img id="rogue" class="hero-opponent" src="{% static 'css/hero_pictures/rogue.png' %}" alt="Rogue">
+		</div>
 {% endblock %}

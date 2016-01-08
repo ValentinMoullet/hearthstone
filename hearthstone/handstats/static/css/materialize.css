@@ -2291,7 +2291,7 @@ td, th {
       .collection .collection-item.avatar .circle {
         position: absolute;
         width: 42px;
-        height: 42px;
+        height: 50px;
         overflow: hidden;
         left: 15px;
         display: inline-block;
@@ -5794,6 +5794,7 @@ small {
   will-change: transform, opacity; }
 
 .btn, .btn-large, .btn-flat {
+  margin-right: 50px;
   border: none;
   border-radius: 2px;
   display: inline-block;

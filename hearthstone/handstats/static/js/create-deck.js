@@ -69,7 +69,8 @@ function heroChosen(e) {
 			
 			// Create new header
 			h5 = document.createElement("h5");
-			h5.textContent = "Now, put all cards in the deck (30 cards).";
+			h5.id = "counter";
+			h5.textContent = "Now, put all cards in the deck (0/30 cards).";
 			mainContentDiv.append(h5);
 			
 			// Create div for cards to be displayed
@@ -111,7 +112,6 @@ function heroChosen(e) {
 				var search = $("#search");
 				$.get("/get_matching_cards", {search: search.val().trim()})
 					.done(function(data) {
-						console.log("Done getting matchng cards");
 						// When we get all matching cards, writing a new div with all of them
 						divMatchingCards = $("#matching-cards");
 						divMatchingCards.empty();
@@ -137,8 +137,12 @@ function heroChosen(e) {
 										divCards.append(newRealCard);
 									}
 									
+									// Edit counter
+									$("#counter").text("Now, put all cards in the deck (" + data.counter + "/30 cards).");
+									console.log(counter);
+									
 									// If the deck contains 30 cards, enable the submit deck button
-									if (data.complete == "True") {
+									if (data.counter == 30) {
 										document.getElementById("submit-deck").disabled = false;
 									}
 									

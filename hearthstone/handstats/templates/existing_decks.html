@@ -16,5 +16,11 @@
         <p>
           These are the decks that are currently available. It means that your opponent HAS to play one of these decks so that you can use this tool efficiently.
         </p>
+		
+		<ul id="decks" class="collection">
+		{% for deck in decks %}
+			{% include 'deck_template.html' %}
+		{% endfor %}
+		</ul>
     </div>
 {% endblock %}

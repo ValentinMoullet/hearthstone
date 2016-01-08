@@ -164,8 +164,17 @@ ul.collection {
 	cursor: pointer;
 }
 
+.hero, .hero-opponent {
+	cursor: pointer;
+}
+
 .remove-card {
 	cursor: pointer;
 	font-weight: bold;
 	color: red;
+}
+
+.mini-hero {
+	height: 10%;
+	width: 10%;
 }

@@ -37,8 +37,6 @@ def add_card_to_deck_creation(request):
 		
 		context['deck_creation'] = deck_creation
 
-		context['complete'] = deck_creation.nb_cards == 30
-
 		return render(request, 'deck_creation.json', context, content_type='application/json')
 
 	return HttpResponse("")
@@ -75,7 +73,6 @@ def remove_card_from_deck_creation(request):
 					break
 			
 		context['deck_creation'] = deck_creation
-		context['complete'] = False
 		
 		# If no more cards, send nothing
 		if deck_creation.nb_cards < 1:
@@ -98,15 +95,18 @@ def create_new_deck_creation(request):
 	
 def submit_deck_creation(request):
 	if 'deck_creation_id' in request.POST and not request.POST['deck_creation_id'] == '' and 'deck_name' in request.POST and not request.POST['deck_name'] == '':
+
 		deck_creation_id = request.POST['deck_creation_id']
 		deck_name = request.POST['deck_name']
-		
+
 		deck_creation = get_object_or_404(DeckCreation, pk=deck_creation_id)
-		
+
 		new_deck = Deck(hero=deck_creation.hero, name=deck_name)
 		new_deck.save()
+
 		for real_card in deck_creation.real_cards.all():
 			new_deck.cards.add(real_card)
+			
 		new_deck.save()
 		
 		return HttpResponse("Success")

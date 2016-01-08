@@ -1,0 +1,17 @@
+{% extends 'base_index.html' %}
+
+{% block title %} Deck list {{ deck.name }} {% endblock title%}
+
+{% block main_content %}
+    <div>
+        <h4> {{deck.name}} </h4>
+        {% for real_card in deck.get_cards.all %}
+			{% include 'real_card_template.html' %}
+		{% endfor %}
+		<ul id="decks" class="collection">
+		{% for deck in decks %}
+			{% include 'deck_template.html' %}
+		{% endfor %}
+		</ul>
+    </div>
+{% endblock %}

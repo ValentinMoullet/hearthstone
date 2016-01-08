@@ -1,0 +1,10 @@
+{% load staticfiles %}
+{% static 'css/hero_pictures' as hero_pictures_url %}
+<li id='deck_{{deck.id}}' class='collection-item avatar'>
+  <a href='{% url 'get_deck_list' deck.id %}' target='_blank'>
+    <div class='ranking-row-content'>
+      <img src='{{hero_pictures_url}}/{{deck.hero}}.png' alt='{{deck.id}}' class='mini-hero circle'>
+      <span class='ranking-name'>{{ deck.name }}</span>
+    </div>
+  </a>
+</li>

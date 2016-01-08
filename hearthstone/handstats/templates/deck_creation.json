@@ -1,1 +1,1 @@
-{"realCards":[{% for real_card in deck_creation.real_cards.all %}{%spaceless%}{% include 'deck_creation_card.json' %}{%endspaceless%}{% if not forloop.last %}, {% endif %}{% endfor %}], "complete": "{{complete}}"}
+{"realCards":[{% for real_card in deck_creation.real_cards.all %}{%spaceless%}{% include 'deck_creation_card.json' %}{%endspaceless%}{% if not forloop.last %}, {% endif %}{% endfor %}], "counter": {{deck_creation.nb_cards}}}
