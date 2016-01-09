@@ -111,7 +111,7 @@ nav .input-field {
 }
 
 ul.collection {
-    width: 500px;
+    width: 900px;
 }
 
 .ranking-name{
@@ -119,6 +119,7 @@ ul.collection {
     color: grey;
     position: relative;
     top: 10px;
+	margin-right: 100px;
 }
 
 .ranking-row-content{
@@ -177,4 +178,18 @@ ul.collection {
 .mini-hero {
 	height: 10%;
 	width: 10%;
+}
+
+.my-checkbox {
+	float: right;
+}
+
+.page-flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }

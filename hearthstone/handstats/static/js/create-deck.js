@@ -33,7 +33,7 @@ function submitDeck() {
 		});
 }
 
-function heroChosen(e) {
+function heroChosenCreation(e) {
 	var hero = e.currentTarget.id;
 	
 	$.post("/create_new_deck_creation", {hero: hero})
@@ -161,7 +161,7 @@ function heroChosen(e) {
 
 $(document).ready(function () {
   // Add event-handlers
-  $(".hero").click(heroChosen);
+  $(".hero").click(heroChosenCreation);
 
   // CSRF set-up copied from Django docs
   function getCookie(name) {

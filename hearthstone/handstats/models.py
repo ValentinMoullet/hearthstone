@@ -50,6 +50,13 @@ class Deck(models.Model):
 		return self.cards.order_by('card__cost')
 		
 	@property
+	def html_selectable(self):
+		deck_template = loader.get_template('deck_selectable_template.html')
+		context = Context({'deck':self})
+		to_render = deck_template.render(context).replace('\n','')
+		return to_render
+		
+	@property
 	def html(self):
 		deck_template = loader.get_template('deck_template.html')
 		context = Context({'deck':self})
@@ -61,6 +68,21 @@ class DeckCreation(models.Model):
 	nb_cards = models.IntegerField()
 	real_cards = models.ManyToManyField(RealCard)
 
+	def __unicode__(self):
+		return str(self.id)
+	def __str__(self):
+		return self.__unicode__()
+		
+class Game(models.Model):
+	opponent_hero = models.CharField(max_length = 200)
+	first_to_play = models.BooleanField()
+	turn = models.IntegerField(default = 1)
+	if first_to_play:
+		opponent_cards_nb = models.IntegerField(default = 5)
+	else:
+		opponent_cards_nb = models.IntegerField(default = 4)
+	decks = models.ManyToManyField(Deck)
+	
 	def __unicode__(self):
 		return str(self.id)
 	def __str__(self):

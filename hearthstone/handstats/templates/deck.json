@@ -1,1 +1,1 @@
-{"id":{{deck.id}}, "html":"{{deck.html|safe}}"}
+{"id":{{deck.id}}, "html":"{{deck.html_selectable|safe}}"}

@@ -10,12 +10,12 @@ def existing_decks(request):
 	if 'hero' in request.GET and request.GET['hero'] != '':
 		decks = Deck.objects.filter(hero=request.GET['hero'])
 		context['decks'] = decks
-		
+		context['selectable'] = True
 		return render(request, 'decks.json', context, content_type='application/json')
 	else:
 		decks = Deck.objects.order_by('hero')
 		context['decks'] = decks
-	
+		context['selectable'] = False
 		return render(request, 'existing_decks.html', context)
 	
 	

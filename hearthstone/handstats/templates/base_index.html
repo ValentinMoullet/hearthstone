@@ -15,6 +15,8 @@
     </head>
 
     <body>
+		<div class="page-flex-wrapper">
+		<header>
         <!-- ____________________ NAVBAR ____________________ -->
         <nav>
             <div class="nav-wrapper orange">
@@ -51,14 +53,33 @@
                 </ul>
             </div>
         </nav>
+		</header>
 
 		<!--<div id="questions-search"></div>-->
-
+		<main>
         <div class="container">
             {% block main_content %} {% endblock main_content %}
         </div>
+		</main>
 
-
+		<footer class="page-footer">
+		  <div class="footer-copyright">
+            <div class="container">
+            © 2016 Valentin Moullet
+            <!--<a class="grey-text text-lighten-4 right" href="#!">Contact</a>-->
+			<a class="grey-text text-lighten-4 right" href="https://twitter.com/FatalityHS">
+			  <img title="Twitter" src="{% static 'css/social_media/twitter-icon.png' %}" alt="Twitter" width="35" height="35" />
+			</a>
+            <a class="grey-text text-lighten-4 right" href="https://www.facebook.com/valentin.moullet">
+			  <img title="Facebook" src="{% static 'css/social_media/facebook-icon.png' %}" alt="Facebook" width="35" height="35" />
+			</a>
+			<a class="grey-text text-lighten-4 right" href="https://ch.linkedin.com/in/valentin-moullet-a4a93566">
+			  <img title="Linked-in" src="{% static 'css/social_media/linkedin-icon.png' %}" alt="Linked-in" width="35" height="35" />
+			</a>
+			</div>
+          </div>
+		</footer>
+		</div>
 
       <!--Import jQuery before materialize.js-->
 	  {% block js_import %}
@@ -67,6 +88,7 @@
       <script type="text/javascript" src="{% static 'js/materialize.min.js'%}"></script>
 	  <script type="text/javascript" src="{% static 'js/create-deck.js'%}"></script>
 	  <script type="text/javascript" src="{% static 'js/initiate-game.js'%}"></script>
+	  <script type="text/javascript" src="{% static 'js/game.js'%}"></script>
 	  {% endblock js_import %}
     </body>
 
