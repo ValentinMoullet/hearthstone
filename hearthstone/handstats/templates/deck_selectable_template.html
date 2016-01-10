@@ -6,7 +6,7 @@
       <img src='{{hero_pictures_url}}/{{deck.hero}}.png' alt='{{deck.id}}' class='mini-hero circle'>
       <span class='ranking-name'>{{ deck.name }}</span>
 	  <span class='ranking-name my-checkbox'>
-	    <input type='checkbox' id='deck_selected_{{deck.id}}' name='checkbox[]' class='filled-in' value='{{deck.id}}' {% if deck in game.decks.all %} checked {% endif %}/>
+	    <input type='checkbox' id='deck_selected_{{deck.id}}' name='checkbox[]' class='filled-in' value='{{deck.id}}' {% if deck in game.get_decks %} checked {% endif %}/>
 	    <label for='deck_selected_{{deck.id}}'></label>
 	  </span>
     </div>

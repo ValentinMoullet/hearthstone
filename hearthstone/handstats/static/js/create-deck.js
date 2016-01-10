@@ -117,7 +117,6 @@ function heroChosenCreation(e) {
 						divMatchingCards.empty();
 
 						if (data.cards != undefined) {
-							console.log("Not undefined");
 							// Writing all cards
 							for (var i = 0; i < data.cards.length; i++) {
 								var newCard = $(data.cards[i].html);
@@ -139,7 +138,6 @@ function heroChosenCreation(e) {
 									
 									// Edit counter
 									$("#counter").text("Now, put all cards in the deck (" + data.counter + "/30 cards).");
-									console.log(counter);
 									
 									// If the deck contains 30 cards, enable the submit deck button
 									if (data.counter == 30) {

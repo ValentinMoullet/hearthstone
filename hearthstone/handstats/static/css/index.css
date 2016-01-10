@@ -184,6 +184,14 @@ ul.collection {
 	float: right;
 }
 
+.green-text {
+	color: green;
+}
+
+.red-text {
+	color: red;
+}
+
 .page-flex-wrapper {
     display: flex;
     min-height: 100vh;

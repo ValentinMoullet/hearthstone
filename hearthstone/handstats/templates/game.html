@@ -37,7 +37,15 @@
 	  <br>
 	  <br>
       <div id="opponent-hand" class="col s12">
-	    <h5>Opponent's cards in hand: {{game.opponent_cards_nb}} cards</h5>
+	    <h5>Opponent's cards in hand: {{game.opponent_hand_cards_nb}} cards</h5>
+		<br>
+		<br>
+		{% for deck_in_game in game.decks.all %}
+			{% for real_card in deck_in_game.cards.all %}
+				{{real_card.card.name}} &nbsp; {{real_card.prob_in_hand}}
+				<br>
+			{% endfor %}
+		{% endfor %}
 	  </div>
       <div id="edit-deck" class="col s12">
 		<h5>Select what your opponent is playing</h5>
